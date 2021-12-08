@@ -19,6 +19,9 @@ export class ReportDto {
   @Expose()
   lat: number;
 
+  @Expose()
+  approved: boolean;
+
   // what we are doing is we are not adding the user and instead of user :{id:'', email:'', password:''}
   // we include userId where where we use user id only instead of whole object
   @Transform(({ obj }) => obj.user.id)
